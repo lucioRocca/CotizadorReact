@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-class ImportApi extends Component{
+class CargaCriptomonedas extends Component{
     
     state = { criptomoneda: {}}
 
@@ -54,4 +54,4 @@ class ImportApi extends Component{
     }
 }
 
-export default ImportApi;
+export default CargaCriptomonedas;

@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import './App.css';
-import ImportApi from './js/Api.js';
 import CargaCriptomonedas from './js/Api.js';
 
 
 function App() {
   return (
-  <div>
+  <div class= "principal">
+      
+      
+    <div class ="conteiner">
       <h1>Convertidor de criptomonedas</h1>
       <CargaCriptomonedas/>  
+    </div>
+  
+        
   </div>
   
 
