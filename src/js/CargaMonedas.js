@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 class CargaMonedas extends Component{
     
     state = { 
@@ -26,7 +27,7 @@ class CargaMonedas extends Component{
             //console.log(monedas.results)
             return  Object.entries(monedas.results).map(([key, value]) =>{
                     return (
-                    <option key={key}>{value.currencyName}</option>
+                    <option key={key} value={key}>{value.currencyName}</option>
                     )
                 })
         }
@@ -36,12 +37,13 @@ class CargaMonedas extends Component{
         
         return(
             <div className='monedas'>
+      
             <select>
-          
-              <option key="moneda">Seleccione Su Moneda</option>
+                <option value= 'moneda' key="moneda">Seleccione Su Moneda</option>
                 {this.cargarMonedas()}
             </select>
-        </div>
+            
+            </div>
         )
     }
 }

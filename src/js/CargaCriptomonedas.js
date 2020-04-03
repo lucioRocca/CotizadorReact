@@ -5,7 +5,7 @@ class CargaCriptomonedas extends Component{
 
     state = { 
         criptomoneda: {},
-        keyApi: '587f2786d4ab857fe00b1cf2b25cfdf6b43ba5220849cc2658892344dd30085a'
+        keyApi: '587f2786d4ab857fe00b1cf2b25cfdf6b43ba5220849cc2658892344dd30085a',
     }
          
 
@@ -22,17 +22,19 @@ class CargaCriptomonedas extends Component{
 
     }
     
+    
+
     cargaCriptomonedas(){ 
         //console.log(this.state.criptomoneda.Data) 
         if (this.state.criptomoneda.Data !== undefined){
             let criptomoneda = this.state.criptomoneda
             //for (var [key, value] of Object.entries(criptomoneda.Data)) {
-            //console.log(criptomoneda.Data)
+            console.log(criptomoneda.Data)
             return Object.values(criptomoneda.Data).map((value) =>{  
                //console.log(value)
                 
                 return(
-                   <option key={value.Symbol}>{value.CoinName}</option> 
+                   <option key={value.Symbol} value={value.Symbol}>{value.CoinName}</option> 
                 )
 
             
@@ -42,15 +44,14 @@ class CargaCriptomonedas extends Component{
     }
 
     render(){
-        
       return(
-        <div className='monedas'>
-            <select>
-                <option key="criptomoneda">Seleccione Su Criptomoneda</option>
-                {this.cargaCriptomonedas()}
-        
-            </select>
-        </div>
+
+        <select  >
+            <option key="criptomoneda" value="criptomoneda">Seleccione Su Criptomoneda</option>
+            {this.cargaCriptomonedas()}
+
+        </select>
+
         )
     }
 }
