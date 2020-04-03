@@ -7,8 +7,8 @@ import CargaMonedas from './js/CargaMonedas.js';
 class App extends Component {
 
   state = {
-    criptomonedaSeleccionada: 'criptomoneda',
-    monedaSeleccionada: 'moneda',
+    criptomonedaSeleccionada: undefined,
+    monedaSeleccionada: undefined,
   }
 
 
@@ -33,11 +33,13 @@ class App extends Component {
         
         <div className='all-monedas'>
           <div className='monedas' onChange={this.handleChangeMoneda}>
+          <label>moneda</label>
             <CargaMonedas />
             <p>{this.state.monedaSeleccionada}</p>
           </div>
 
           <div className='monedas' onChange={this.handleChangeCripto}>
+            <label>criptomoneda</label>
             <CargaCriptomonedas />  
             <p>{this.state.criptomonedaSeleccionada}</p>
           </div>

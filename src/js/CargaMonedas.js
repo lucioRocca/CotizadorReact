@@ -36,14 +36,12 @@ class CargaMonedas extends Component{
     render(){
         
         return(
-            <div className='monedas'>
-      
-            <select>
-                <option value= 'moneda' key="moneda">Seleccione Su Moneda</option>
+        <form >
+            <input list="monedas" name="moneda"></input>
+            <datalist className ="datalist" id="monedas">
                 {this.cargarMonedas()}
-            </select>
-            
-            </div>
+            </datalist>
+        </form>
         )
     }
 }
