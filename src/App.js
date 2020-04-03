@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
 import './App.css';
-import CargaCriptomonedas from './js/Api.js';
+import CargaCriptomonedas from './js/CargaCriptomonedas.js';
+import CargaMonedas from './js/CargaMonedas.js';
 
 
 function App() {
   return (
-  <div class= "principal">
+  <div className= "principal">
       
       
-    <div class ="conteiner">
+    <div className ="conteiner">
       <h1>Convertidor de criptomonedas</h1>
-      <CargaCriptomonedas/>  
+      
+      <div className='all-monedas'>
+        <CargaMonedas />
+        <CargaCriptomonedas />  
+      </div>
+
     </div>
   
-        
   </div>
   
 

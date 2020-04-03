@@ -24,6 +24,14 @@
   background-color: lightslategrey;
   text-align: center;
   width: max-content;
+  display: inline-block;
+}
+.padding-monedas{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.all-monedas{
+  display: inline-flex;
 }
 .App-header {
   background-color: #282c34;
