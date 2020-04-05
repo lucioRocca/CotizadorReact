@@ -32,7 +32,7 @@ class CargaCriptomonedas extends Component{
             return Object.values(criptomoneda).map((value) =>{  
                 
                 return(
-                   <option key={value.Symbol} value={value.CoinName}>{value.Symbol}</option> 
+                   <option key={value.Symbol} value={value.Symbol}>{value.CoinName}</option> 
                 )
 
             
@@ -45,12 +45,10 @@ class CargaCriptomonedas extends Component{
       return(
        
        
-    <form >
-        <input list="criptomonedas" name="criptomoneda"></input>
-        <datalist className ="datalist" id="criptomonedas">
+    <select>
+        <option>Seleccione una criptomoneda</option>
         {this.cargaCriptomonedas()}
-        </datalist>
-    </form>
+    </select>
        
             
         
